@@ -14,7 +14,7 @@ read phone
 # Afisarea raspunsurilor si intrebarea de confirmare
 echo "Doriti introducerea valorilor: "
 echo -e "$name ; $phone \n"
-echo -n "y/n: "
+echo -n "Introduceti raspunsul (y/n): "
 read answer
 
 if [ "$answer" == "y" ]; then

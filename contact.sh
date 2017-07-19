@@ -1,5 +1,32 @@
-#shell script to make Contact Diary...
 #!bin/sh
+# Shell script to make Contact Diary...
+
+# Definirea functiilor necesare aplicatiei CRUD(create, read, update,delete)
+
+function pb_create()
+{
+    # echo "Functie neimplementata"
+    echo -n "Introduceti numele dvs. complet (Ex: Mihai Cornel): "
+    read nume
+    echo -n "Introduceti numarul de telefon: "
+    read nrtel
+}
+
+function pb_read()
+{
+    echo "Functie neimplementata"
+}
+
+function pb_update()
+{
+    echo "Functie neimplementata"
+}
+
+function pb_delete()
+{
+    echo "Functie neimplementata"
+}
+
 echo "Contacts"
 echo "1.Save Only"
 echo "2.To view saved Contact"
