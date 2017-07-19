@@ -1,6 +1,10 @@
 #!bin/sh
 # Shell script to make Contact Diary...
 
+# Fiala unde sunt stocate valorile introduse in aplicatie
+
+BOOK="contacte.txt"
+
 # Definirea functiilor necesare aplicatiei CRUD(create, read, update,delete)
 
 function pb_create()
@@ -10,6 +14,18 @@ function pb_create()
     read nume
     echo -n "Introduceti numarul de telefon: "
     read nrtel
+    # Intreaba utilizatorul pentru confirmare
+    echo "Doriti introducerea valorilor in agenda?"
+    echo -e "$nume ; $nrtel \n"
+    echo -n "y/n: "
+    if [ "$answer" == "y" ]; then
+        # Scrieti valorile in agenda
+        echo "$nume ; $nrtel" >>$BOOK
+    else
+        echo "$nume ; $nrtel NU a fost salvat"
+    fi
+
+    exit 0
 }
 
 function pb_read()
